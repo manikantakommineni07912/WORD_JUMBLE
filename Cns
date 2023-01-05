@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class program1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter plaintext:");
+		String pt=sc.nextLine();
+		System.out.println("enter the value to be shifted:");
+		int key=sc.nextInt();
+		char c;
+		char d;
+		String cipher="";
+		String original="";
+	    char a[]=pt.toCharArray();
+	    for(int i=0;i<a.length;i++) {
+	    	c=((char)(a[i]+key));
+	    	cipher=cipher+c;
+	    	
+	    }
+	    System.out.print("Encrypted "+cipher);
+	   char b[]=cipher.toCharArray();
+	   for(int i=0;i<b.length;i++) {
+		   d=((char)(b[i]-key));
+		   original=original+d;
+	   }
+	   System.out.print("\ndecrypted "+original);
+	
+
+}
+}
